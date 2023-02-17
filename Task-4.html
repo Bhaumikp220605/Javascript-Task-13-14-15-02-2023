@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: rgb(81, 213, 123);
+    }
+
+    h1 {
+      text-align: center;
+      color: blue;
+  }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      width: 25%;
+      padding: 7px;
+      margin: -5px 36px;
+      font-size: 27px;
+      text-align: center;
+  }
+
+    button {
+      align-items: center;
+      text-align: center;
+      padding: 12px 40px;
+      font-size: 29px;
+      justify-content: space-between;
+      display: flex;
+      margin: 20px auto;
+      color: aliceblue;
+      background-color: black;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: .9;
+    }
+
+    h2 {
+      text-align: center;
+      color: red;
+      font-size: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Convert Minute Into Second</h1><br>
+  <div class="container">
+    <input type="text" id="minutes" placeholder="Minutes"><br>
+    <button id="convert" onclick="Minintosecond()">Convert</button>
+    <h2 id="result"></h2>
+  </div>
+
+  <script>
+
+    function Minintosecond() {
+      let minute = document.getElementById('minutes').value;
+      document.getElementById('result').innerHTML = "Second Is =" + minute * 60; // a*b*c
+    }
+
+    /*const convertBtn = document.querySelector("#convert");
+    const minutesInput = document.querySelector("#minutes");
+    const resultDiv = document.querySelector("#result");
+
+    convertBtn.addEventListener("click", function() {
+      const minutes = Number(minutesInput.value);
+      const seconds = minutes * 60;
+      resultDiv.textContent = minutes + " minutes is equal to " + seconds + " seconds.";
+    });*/
+  </script>
+</body>
+
+</html>

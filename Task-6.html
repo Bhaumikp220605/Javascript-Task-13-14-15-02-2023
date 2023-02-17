@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-6</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 25px;
+            color: brown;
+        }
+
+        input {
+            width: 20%;
+            padding: 5px;
+            font-size: 25px;
+            text-align: center;
+        }
+        button {
+            align-items: center;
+            text-align: center;
+            padding: 12px 40px;
+            font-size: 29px;
+            justify-content: space-between;
+            display: flex;
+            margin: 20px auto;
+            color: aliceblue;
+            background-color: black;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: .9;
+        }
+
+        h2 {
+            text-align: center;
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <label for="Won">Won:</label>
+        <input type="text" id="num1"><br><br>
+    </div>
+
+    <div class="main">
+        <label for="Draw">Draw:</label>
+        <input type="text" id="num2"><br><br>
+    </div>
+
+    <div class="main">
+        <label for="Lose">Lose:</label>
+        <input type="text" id="num3"><br><br>
+    </div>
+
+    <button onclick="TotalLeg()">Total</button>
+
+    <h2 id="ans"></h2>
+
+    <script>
+
+        function TotalLeg() {
+            let a = document.getElementById('num1').value;
+            let b = document.getElementById('num2').value;
+            let c = document.getElementById('num3').value;
+
+
+            document.getElementById('ans').innerHTML = "Total Point Is " + ((a * 3) + (b * 1) + (c * 0));
+        }
+    </script>
+
+</body>
+
+</html>
