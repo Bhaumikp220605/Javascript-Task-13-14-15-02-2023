@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hmm</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(128, 167, 219);
+        }
+
+        #container {
+            display: flex;
+        }
+
+        #container button {
+            background-color: rgb(54, 49, 49);
+            color: rgb(203, 188, 188);
+            padding: 10px 20px;
+            font-size: 30px;
+            margin: 10px auto;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #container button:hover{
+            background-color: transparent;
+            color: rgb(0, 255, 4);
+            transition: 1s ease;
+            border: 2px solid rgb(54, 49, 49);
+        }
+
+        
+
+        img {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        h1{
+            text-align: center;
+            color: rgb(121, 29, 29);
+            font-size: 70px;
+            margin: 20px 0;
+        }
+        p{
+            font-size: 35px;
+            color: rgb(200, 169, 169);
+            padding: 2px 200px;
+            margin: 20px 0;
+        }
+        .img img{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            z-index: -1;
+            /* opacity: .8; */
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="img">
+        <img src="solar system.jpg" alt="">
+    </div>
+    <div id="container">
+        <button id="Sun">Sun</button>
+        <button id="Mercury">Mercury</button>
+        <button id="Venus">Venus</button>
+        <button id="Earth">Earth</button>
+        <button id="Mars">Mars</button>
+        <button id="Jupiter">Jupiter</button>
+        <button id="Saturn">Saturn</button>
+        <button id="Uranus">Uranus</button>
+        <button id="Neptune">Neptune</button>
+        <button id="Pluto">Pluto</button>
+    </div>
+    <div id="description">
+        <h1 id="heading"></h1>
+        <img src="" alt="" id="image">
+        <p id="desc"></p>
+    </div>
+
+
+
+        <!-- <p id="description1">
+            Description for button 1
+            <h1>hello</h1>
+        </p>
+        <p id="description2">Description for button 2</p>
+        <p id="description3">Description for button 3</p>
+        <p id="description4">Description for button 4</p>
+        <p id="description5">Description for button 5</p> -->
+
+
+    <script>
+        // const buttons = document.querySelectorAll("#container button");
+        // const desc = document.querySelectorAll("#description h1 ");
+        const Sun = document.getElementById('Sun');
+        const Mercury = document.getElementById('Mercury');
+        const Venus = document.getElementById('Venus');
+        const Earth = document.getElementById('Earth');
+        const Mars = document.getElementById('Mars');
+        const Jupiter = document.getElementById('Jupiter');
+        const Saturn = document.getElementById('Saturn');
+        const Uranus = document.getElementById('Uranus');
+        const Neptune = document.getElementById('Neptune');
+        const Pluto = document.getElementById('Pluto');
+        const image = document.getElementById('image');
+        const heading = document.getElementById('heading');
+        const paragraph = document.getElementById('desc');
+
+        Sun.addEventListener('click', function () {
+            heading.textContent = `Sun`;
+            heading.style.display = 'block';
+            image.src = 'sun.jpg';
+            image.style.display = 'block';
+            paragraph.textContent = `The Sun is a 4.5 billion-year-old yellow dwarf star – a hot glowing ball of hydrogen and helium – at the center of our solar system. It's about 93 million miles (150 million kilometers) from Earth and it's our solar system's only star. Without the Sun's energy, life as we know it could not exist on our home planet.`;
+            paragraph.style.display = 'block';
+
+        })
+
+        Mercury.addEventListener('click', function () {
+            heading.textContent = `Mercury`;
+            heading.style.display = 'block';
+            image.src = 'mercury.jpg';
+            image.style.display = 'block';
+            paragraph.textContent = `Mercury—the smallest planet in our solar system and closest to the Sun—is only slightly larger than Earth's Moon. Mercury is the fastest planet, zipping around the Sun every 88 Earth days.`;
+            paragraph.style.display = 'block';
+        })
+
+
+        Venus.addEventListener('click', function () {
+            heading.textContent = `Venus`;
+            heading.style.display = 'block';
+            image.src = 'venus.jpg';
+            image.style.display = 'block';
+            paragraph.textContent = `Venus spins slowly in the opposite direction from most planets. A thick atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in our solar system.`;
+            paragraph.style.display = 'block';
+        })
+
+
+        Earth.addEventListener('click', function () {
+            heading.textContent = `Earth`;
+            heading.style.display = 'block';
+            image.src = 'earth.jpg';
+            image.style.display = 'block';
+            paragraph.textContent = `Earth—our home planet—is the only place we know of so far that’s inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.`;
+            paragraph.style.display = 'block';
+        })
+
+
+        Mars.addEventListener('click', function () {
+            heading.textContent = `Mars`;
+            heading.style.display = 'block';
+            image.src = 'mars.jpg';
+            image.style.display = 'block';
+            paragraph.textContent = `Mars is a dusty, cold, desert world with a very thin atmosphere. There is strong evidence Mars was – billions of years ago – wetter and warmer, with a thicker atmosphere.`;
+            paragraph.style.display = 'block';
+        })
+
+
+        Jupiter.addEventListener('click', function () {
+            heading.textContent = `Jupiter`;
+            heading.style.display = 'block';
+            image.src = 'jupiter.jpg';
+            image.style.display = 'block';
+            paragraph.textContent = `Jupiter is more than twice as massive than the other planets of our solar system combined. The giant planet's Great Red spot is a centuries-old storm bigger than Earth.`;
+            paragraph.style.display = 'block';
+        })
+
+
+        Saturn.addEventListener('click', function () {
+            heading.textContent = `Saturn`;
+            heading.style.display = 'block';
+            image.src = 'saturn.jpg';
+            image.style.display = 'block';
+            paragraph.textContent = `Adorned with a dazzling, complex system of icy rings, Saturn is unique in our solar system. The other giant planets have rings, but none are as spectacular as Saturn's.`;
+            paragraph.style.display = 'block';
+        })
+
+
+        Uranus.addEventListener('click', function () {
+            heading.textContent = `Uranus`;
+            heading.style.display = 'block';
+            image.src = 'uranus.jpg';
+            image.style.display = 'block';
+            paragraph.textContent = `Uranus—seventh planet from the Sun—rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side.`;
+            paragraph.style.display = 'block';
+        })
+
+
+        Neptune.addEventListener('click', function () {
+            heading.textContent = `Neptune`;
+            heading.style.display = 'block';
+            image.src = 'neptune.jpg';
+            image.style.display = 'block';
+            paragraph.textContent = `Neptune—the eighth and most distant major planet orbiting our Sun—is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations.`;
+            paragraph.style.display = 'block';
+        })
+
+        
+        Pluto.addEventListener('click', function () {
+            heading.textContent = `Pluto`;
+            heading.style.display = 'block';
+            image.src = 'pluto.jpg';
+            image.style.display = 'block';
+            paragraph.textContent = `Pluto is a dwarf planet in the Kuiper Belt, a donut-shaped region of icy bodies beyond the orbit of Neptune. There may be millions of these icy objects, collectively referred to as Kuiper Belt objects (KBOs) or trans-Neptunian objects (TNOs), in this distant region of our solar system.`;
+            paragraph.style.display = 'block';
+        })
+
+
+
+        
+
+
+        // button1.addEventListener('click', function () {
+        //     heading.textContent = 'Button 1 clicked';
+        //     paragraph.textContent = 'This is the description for Button 1.';
+        //     heading.style.display = 'block';
+        //     paragraph.style.display = 'block';
+        // });
+
+
+        // for (let i = 0; i < buttons.length; i++) {
+        //     buttons[i].addEventListener("click", function () {
+        //         for (let j = 0; j < desc.length; j++) {
+        //             desc[j].style.display = "none";
+        //         }
+        //         desc[i].style.display = "block";
+        //     })
+
+        // }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
