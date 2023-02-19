@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .product {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        } */
+
+        .product{
+            padding: 7px;
+            border: 1px solid black;
+            margin: 0 10px;
+        }
+
+        .container{
+            display: flex;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+
+        img{
+            width: 470px;
+        }
+
+        /* Button */
+        .add-to-wishlist {
+            background-color: rgb(224, 155, 77);
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18   px;
+        }
+
+        .wishlist {
+            width: 97%;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .wishlist-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .wishlist-item {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="product">
+            <img src="iphone 14.jpg" alt="">
+            <h1>iphone 14</h1>
+            <button class="add-to-wishlist" data-product="iphone 14">Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <img src="iphone 14 pro.jpg" alt="">
+            <h1>iphone 14 pro</h1>
+            <button class="add-to-wishlist" data-product="iphone 14 pro">Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <img src="samsung s22 ultra.webp" alt="">
+            <h1>samsung s22 ultra</h1>
+            <button class="add-to-wishlist" data-product="samsung s22 ultra">Add to Wishlist</button>
+        </div>
+
+    </div>
+    <div class="wishlist">
+        <h1>Wishlist</h1>
+        <h2 class="wishlist-items"></h2>
+    </div>
+
+
+    <script>
+        const addButton = document.querySelectorAll('.add-to-wishlist');
+        const wishlistItems = document.querySelector('.wishlist-items');
+
+        addButton.forEach(button => {
+            button.addEventListener('click', () => {
+                const product = button.dataset.product;
+                const listItem = document.createElement('li');
+                listItem.classList.add('wishlist-item');
+                listItem.textContent = product;
+                wishlistItems.appendChild(listItem);
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
